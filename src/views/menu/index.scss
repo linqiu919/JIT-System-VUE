@@ -1,0 +1,44 @@
+.brand-wrapper{
+  height: 100%;
+}
+.exec-box{
+  height: 40px;
+}
+.page-box{
+  margin-top: 20px;
+  text-align: center;
+}
+.el-scrollbar{
+  height: 80%;
+}
+
+/*上传图片样式*/
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+.vue-treeselect_control{
+  height: 28px;
+}
