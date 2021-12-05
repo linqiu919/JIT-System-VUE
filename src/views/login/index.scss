@@ -1,7 +1,13 @@
 .login{
   width: 100%;
   height: 100%;
-  background: rgb(48,49,62);
+  background-image: url("https://p26-tt.byteimg.com/origin/user-profile/f3cfd10a79df1315c17833948e975fc5.jpg");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +22,6 @@
     img{
       width: 74px;
       vertical-align: middle;
-      margin-right: 10px;
     }
   }
   .login-input{
@@ -26,21 +31,31 @@
     .el-input{
       // margin-bottom: 20px;
       .el-input__inner{
-        border-radius: 30px!important;
+        //border-radius: 30px!important;
         text-align: center;
       }
     }
     .el-button{
-      border-radius: 30px!important;
-      width: 290px;
+      border-radius: 5px!important;
+      width: 150px;
       background: rgb(3,174,189);
       color: #fff;
       border: 0;
+      margin: 0 50px;
     }
     .signImage{
-      margin-left: 60px;
-      width:150px;
-      height:50px;
+      border-radius: 5px!important;
+      margin-left: 170px;
+      width: 120px;
+      height: 40px;
+      background: white;
+    }
+    #yzm{
+      width:45%;
+      float: left;
+    }
+    .el-form-item__content{
+      text-align: center;
     }
 
   }

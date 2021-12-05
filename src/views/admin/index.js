@@ -26,14 +26,14 @@ export default {
             disabled: false,
             searchForm: {
                 currentPage: 1,
-                pageSize: 8,
+                pageSize: 6,
             },
             pickerOptions: dateChoose.pickerOptions,
             chooseData: dateChoose.chooseData,
             tableData: [],
             total: 0,
             token: '',
-            pageSize: 8,
+            pageSize: 6,
             selectIds: [],
             createDialog: false,
             formData: {

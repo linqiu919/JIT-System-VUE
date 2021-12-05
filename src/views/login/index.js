@@ -3,6 +3,15 @@ import login from "@/api/login";
 export default {
     name: "index",
     created() {
+            let that = this
+            document.onkeydown = function (e) {
+                e = window.event || e
+                // 验证在登录界面和按得键是回车键enter
+                if (that.$route.path === '/login' && (e.code === 'Enter' || e.code === 'enter')) {
+                    // 登录事件
+                    that.doLogin('loginForm')
+                }
+            }
         this.getCode()
     },
     data() {
@@ -12,8 +21,8 @@ export default {
             loginForm: {
                 code:'',
                 uuid: '',
-                account: '',
-                password: '',
+                account: 'linqiu11',
+                password: '123456',
             },
             rules: {
                 account: [

@@ -5,10 +5,8 @@
         <!--      logo区域-->
         <div class="aside-logo">
           <img :src="admin.adminAvatar" alt="">
-          <span>彼方管理系统</span>
+          <span>VUE-TEST</span>
         </div>
-
-
         <!--
           控制滚动的区域
           这个标签中，放入需要滚动的内容
@@ -24,31 +22,62 @@
             <targetres v-for="(item,index) in menuList" :key="index" :mmmm="item"/>
           </el-menu>
         </el-scrollbar>
-
         <!--      操作区-->
       </el-aside>
 
       <el-container>
-        <el-header class="el_header_style">商销管理系统
-          <el-dropdown @command="dialogVisible = true" trigger="click" split-button type="primary">
-            欢迎你：<span>{{ admin.adminName }}</span>
-            <el-dropdown-menu trigger="click" slot="dropdown">
+        <el-header class="el_header_style">不知道叫什么的系统
+<!--          <el-dropdown @command="dialogVisible = true" trigger="click" split-button type="primary">-->
+<!--            欢迎你：<span>{{ admin.adminName }}</span>-->
+<!--            <el-dropdown-menu trigger="click" slot="dropdown">-->
+<!--              <el-dropdown-item>退出登录</el-dropdown-item>-->
+<!--            </el-dropdown-menu>-->
+<!--          </el-dropdown>-->
+          <el-dropdown @command="dialogVisible = true" trigger="click"
+          >
+            <span class="el-dropdown-link">
+              {{ admin.adminName }}<i class="el-icon-arrow-down el-icon--right"></i>
+            </span>
+            <el-dropdown-menu  slot="dropdown">
               <el-dropdown-item>退出登录</el-dropdown-item>
             </el-dropdown-menu>
-
           </el-dropdown>
+
           <el-dialog
               title="登出提示"
               :visible.sync="dialogVisible"
-              width="20%">
-            <span>关山难越，谁悲失路之人.</span>
-            <span>萍水相逢，竟是他乡之客</span><br/>
-            <span>真的要退出登录吗？</span>
+              width="30%"
+              center>
+            <span>确定要退出系统吗？</span>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" @click="signOut">确 定</el-button>
-            </span>
+            <el-button @click="dialogVisible=false">取 消</el-button>
+            <el-button type="primary" @click="signOut">确 定</el-button>
+  </span>
           </el-dialog>
+
+
+<!--          <el-dialog-->
+<!--              title="确定退出吗?"-->
+<!--              :visible.sync="dialogVisible"-->
+<!--              width="20%"-->
+<!--              center="center"-->
+<!--          >-->
+<!--            <span slot="footer" class="dialog-footer">-->
+<!--              <el-button @click="dialogVisible = false">取 消</el-button>-->
+<!--              <el-button type="primary" @click="signOut">确 定</el-button>-->
+<!--            </span>-->
+<!--          </el-dialog>-->
+
+<!--          <el-dialog-->
+<!--              title="登出提示"-->
+<!--              :visible.sync="dialogVisible"-->
+<!--              width="20%">-->
+<!--            <span>确定退出登录吗？</span>-->
+<!--            <span slot="footer" class="dialog-footer">-->
+<!--                <el-button @click="dialogVisible = false">取 消</el-button>-->
+<!--                <el-button type="primary" @click="signOut">确 定</el-button>-->
+<!--            </span>-->
+<!--          </el-dialog>-->
 
         </el-header>
 
@@ -112,7 +141,7 @@ export default {
 
 /*主页面头部的样式*/
 .el-header {
-  background-color: #42B983;
+  background-color: #088A85;
   color: white;
   text-align: center;
   line-height: 60px;
@@ -146,18 +175,21 @@ export default {
 
 /*主页面中间的样式*/
 .el-main {
-  background-color: #42b983;
+
+  background-color: #088A85;
   /*消除内边距*/
-  padding: 10px 10px 0px 10px;
+  padding: 10px 10px 10px 10px;
   color: #333;
 
   .body-box {
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     background-color: white;
-
+    //margin: 0;
+    //padding: 0;
     /*设置内边距*/
-    padding: 15px 0px 0px 15px;
+    padding: 10px 10px 10px 10px;
     box-sizing: border-box;
   }
 }
@@ -178,5 +210,12 @@ export default {
 .el-dropdown {
   float: right;
   color: darkcyan;
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: white;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
 }
 </style>

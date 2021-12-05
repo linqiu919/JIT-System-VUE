@@ -5,7 +5,7 @@
     <el-menu-item v-if="!mmmm.children || mmmm.children.length==0" :index="mmmm.menuRouter">
           <i v-bind:class="mmmm.menuIcon"></i>
 <!--      <el-icon :icon-name="mmmm.menuIcon"/>-->
-      <span slot="title">{{ mmmm.menuTitle }}</span>
+      <span slot="title">&nbsp;&nbsp;{{ mmmm.menuTitle }}</span>
     </el-menu-item>
 
     <!--系统管理-->

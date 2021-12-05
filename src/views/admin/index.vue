@@ -152,7 +152,7 @@
           >
             <template v-slot="obj">
               <el-switch
-                  v-model="obj.row.isAdmin"
+                  v-model="obj.row.isActive"
                   active-color="#13ce66"
                   inactive-color="#ff4949"
                   disabled>

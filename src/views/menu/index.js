@@ -15,7 +15,7 @@ export default {
         return {
             searchForm: {
                 currentPage: 1,
-                pageSize: 8,
+                pageSize: 6,
             },
             pickerOptions: dateChoose.pickerOptions,
             chooseData: dateChoose.chooseData,
@@ -23,7 +23,7 @@ export default {
             selectId:-1,
             total: 0,
             createDialog: false,
-            pageSize:8,
+            pageSize:6,
             formData: {
                 parentId:0,
                 menuType:1,
@@ -184,7 +184,7 @@ export default {
         resetSearchForm() {
             this.searchForm = {
                 currentPage: 1,
-                pageSize: 8
+                pageSize: 6
             }
             this.chooseData = ''
         },
